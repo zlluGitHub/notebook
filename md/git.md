@@ -111,6 +111,13 @@
       `git checkout` 取消对某个文件的修改，通过 `git status` 查看状态，然后执行 `git checkout` `git checkout 文件名`
 
     + #### git status 
+* ### git pull 使用
+
+    当远端的版本优先于本地的版本，而本地又做了新的版本要提交的时候，会提示提交失败。建议使用 `git pull` 拉取远端的更新。但是拉取的时候会有两种情况。
+
+    1. 远端更新和本地更新不冲突，此时 `git pull` 的时候，会弹出 nano 编辑界面，提示用户合并两个不冲突的更新并提交版本留言，使用 `ctrl + x`，选择 Y 同意，然后直接回车，即可离开 nano 编辑界面。执行完毕之后会生成一个新的版本，即合并远端和本地更新的版本，此时在执行 `git push` 远端和本地就同步了。
+
+    2. 远端更新和本地冲突（修改的是同一文件的相同位置），此时也需要 `git pull` 拉去远端更新,但是提示拉取失败，需要用户手动处理冲突，处理之后相当于修改了文件，所有直接使用 `git add . git commit -m'' git push` 即可提交成功。
 
 - ### 使用git推送代码
 
@@ -140,12 +147,27 @@
 
                 点击ADD SSH KEYS-> 将获取的public key粘贴于此
       
-* ### 分支操作
+* ### git 分支操作
 
     - #### 创建分支
+         
+        1. 创建新的分支之后，分支内默认和 master 分支内的内容相同。想要将本地创建好的分支同步到远端，直接执行 `git push -u origin [分支名]` 即可，以后想要更新 `gh-pages` 分支，直接按照原来的 git 三步即可。
 
-         `git branch [yourbranch]`
+        2. `gh-pages` 分支比较特殊，该分支上的内容可以使用 `github账户名.github.io/仓库名` 地址访问。
+        
+       
+        3. 创建分支：
 
+                git branch [yourbranch] 
+                
+
+        4. 查看分支:
+            ```
+            git branch  　　    //查看本地分支
+            git branch　-a      //参数 查看所有分支(本地和远端)
+            git branch　-r      //参数 查看远端分支
+            ```
+       
     - #### 切换分支 
 
         `git checkout [yourbranch]` 或者直接创建一个分支，并且切换过去 `git checkout -b [yourbranch]`
@@ -161,9 +183,13 @@
 * ### 分支更新及合并
 
     + #### 拉取更新
-    
+        拉取更新之后，直接使用 `git push` 就可以同步更新到远端。
         拉取主分支上的更新 `git pull origin master`
 
     + #### 合并分支
     
         合并其他分支代码 `git merge [otherbranch]`
+
+* ### git 实现历史回滚
+
+    * 回滚之后想要直接同步到远端，由于远端的版本优先于本地，所以直接 `git push` 失败。使用 `git push -f` 强制推送到远端。想要回滚之后在回到原来的版本，版本号找不到了，我们使用 `git reflog` 命令，可查看所有版本的修改，就可以看到所有的版本号了。

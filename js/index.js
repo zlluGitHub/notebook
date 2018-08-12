@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     var marknum=1;
    　$('.bigtitle').text('（'+$('h1').text()+'）'); 
@@ -79,7 +80,6 @@ $('.sidebar-fixed i').click(function(){
   
     
 })
-    
     // 滚动条监听
     $(window).scroll(function() {
         //获取当前滚动条高度
@@ -87,8 +87,6 @@ $('.sidebar-fixed i').click(function(){
         var highttop = $(document).scrollTop();
 
         //用于调试 弹出当前滚动条高度
-
-        //判断如果滚动条大于90则弹出 "ok"
         // console.log(highttop);
         if (highttop > $('header').outerHeight()) {
             $(".sidebar-fixed").css({ position: "fixed", top: "0px" });
@@ -97,3 +95,4 @@ $('.sidebar-fixed i').click(function(){
         }
     });
 });
+

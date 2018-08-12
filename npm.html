@@ -2,10 +2,22 @@
 <html>
 
 <head>
-  <title>git</title>
+  <title>npm</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+
+
+
+
+
+
+
+
+
+
+
   <style>
     /**
  * prism.js Github theme based on GitHub's theme.
@@ -764,322 +776,139 @@
 
 <body for="html-export">
   <div class="mume markdown-preview   ">
-    <h1 class="mume-header" id="p-aligncenterfont-color0000ddgit%E5%92%8Cgithub%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86fontp">
+    <h1 class="mume-header" id="p-aligncenterfont-color0000ddnpm-%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8fontp">
       <p align="center">
-        <font color="#0000dd">git和github的基本知识</font>
+        <font color="#0000dd">NPM 的安装及使用</font>
       </p>
     </h1>
 
     <hr>
     <ul>
       <li>
-        <h3>github的基本安装</h3>
-        <ul>
-          <li>
-            <h4>linux下安装git</h4>
-            <p>直接使用命令：
-              <code>sudo apt-get install git</code>
-            </p>
-          </li>
-          <li>
-            <h4>mac下安装git</h4>
-            <p>直接使用命令:
-              <code>brew install git</code>
-            </p>
-          </li>
-          <li>
-            <h4>windows下安装git</h4>
-            <p>百度 gitbash ，下载安装即可。</p>
-          </li>
-          <li>
-            <h4>git的基本配置</h4>
-            <pre class="language-text">git config --global user.name &quot;zlluGitHub&quot;
-git config --global user.email &quot;18230086651@qq.com&quot;
-</pre>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h3>查看配置信息</h3>
-        <pre class="language-text">git config --list
-</pre>
-      </li>
-      <li>
-        <h3>工作流程</h3>
-        <ul>
-          <li>
-            <p>克隆 Git 仓库作为工作目录（或者自己新建一个工作目录并初始化为Git仓库）。命令：</p>
-            <pre class="language-text"> git clone [仓库地址]
-</pre>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <p>增加资源及修改文件。</p>
-          </li>
-          <li>
-            <p>提交修改。</p>
-          </li>
-          <li>
-            <p>如果他人修改了代码，可以更新资源。</p>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h3>github基本命令</h3>
-        <ul>
-          <li>
-            <h4>git init</h4>
-            <p>通过创建 demo 文件夹，
-              <code>git init</code> 初始化，新建一个仓库。</p>
-            <pre class="language-text">  mkdir demo &amp;&amp; cd demo
-  git init
-</pre>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <h4>git clone</h4>
-            <p>如果在 github 上已经有了仓库，可以直接通过 git clone 将项目 clone 到本地。</p>
-            <pre class="language-text">  git clone [仓库地址]
-</pre>
-          </li>
-          <li>
-            <h4>git diff</h4>
-            <p>查看做了哪些修改。可按 q 退出。</p>
-            <pre class="language-text">  git diff
-</pre>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <h4>git add</h4>
-            <p>
-              <code>git add</code>可以将文件添加到缓存去，获得 Git 的跟踪。也可以通过加参数，将所有的文件添加到缓存区。</p>
-            <pre class="language-text">  git add .   　　　&#x2F;&#x2F;添加所有文件
+        <h3>npm 介绍</h3>
+        <pre data-role="codeBlock" data-info="" class="language-"><code>  NPM &#x662F;&#x968F;&#x540C; NodeJS &#x4E00;&#x8D77;&#x5B89;&#x88C5;&#x7684;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x80FD;&#x89E3;&#x51B3; NodeJS &#x4EE3;&#x7801;&#x90E8;&#x7F72;&#x4E0A;&#x7684;&#x5F88;&#x591A;&#x95EE;&#x9898;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;
 
-  touch a.html     &#x2F;&#x2F;新建　a.html 文件
+  1.&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4ECE; npm &#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x522B;&#x4EBA;&#x7F16;&#x5199;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x5230;&#x672C;&#x5730;&#x4F7F;&#x7528;&#x3002;
 
-  git add a.html　　&#x2F;&#x2F;添加　a.html 文件
+  2.&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4ECE; npm &#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;&#x522B;&#x4EBA;&#x7F16;&#x5199;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x5230;&#x672C;&#x5730;&#x4F7F;&#x7528;&#x3002;
 
-  &#x2F;&#x2F;下面的三种方式效果相同
-
-  git add .
-
-  git add -A
-
-  git add *
-</pre>
-          </li>
-          <li>
-            <h4>git status</h4>
-            <p>
-              <code>git status</code> 可以查看当前版本库各个文件的状态。</p>
-          </li>
-          <li>
-            <h4>git commit</h4>
-            <p>
-              <code>git commit</code> 将缓存区内容添加到仓库中</p>
-          </li>
-          <li>
-            <h4>git commit -m</h4>
-            <p>
-              <code>git commit -m '尽量写的语义话'</code> 版本留言，尽量写的语义话'</p>
-          </li>
-          <li>
-            <h4>git log</h4>
-            <p>
-              <code>git log</code> 查看提交记录。</p>
-          </li>
-          <li>
-            <h4>git reset</h4>
-            <p>
-              <code>git reset</code> 取消已经缓存的内容。
-              <br>
-              <code>git reset --hard HEAD</code>　或
-              <code>git reset --hard [版本号]</code>通过版本号回滚</p>
-          </li>
-          <li>
-            <h4>git rm</h4>
-            <p>
-              <code>git rm</code> 命令把一个文件删除，并把它从git的仓库管理系统中移除。
-              <code>git rm readme.md</code>
-            </p>
-          </li>
-          <li>
-            <h4>git checkout</h4>
-            <p>
-              <code>git checkout</code> 取消对某个文件的修改，通过
-              <code>git status</code> 查看状态，然后执行
-              <code>git checkout</code>
-              <code>git checkout 文件名</code>
-            </p>
-          </li>
-          <li>
-            <h4>git status</h4>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <h3>git pull 使用</h3>
-        <p>当远端的版本优先于本地的版本，而本地又做了新的版本要提交的时候，会提示提交失败。建议使用
-          <code>git pull</code> 拉取远端的更新。但是拉取的时候会有两种情况。</p>
-        <ol>
-          <li>
-            <p>远端更新和本地更新不冲突，此时
-              <code>git pull</code> 的时候，会弹出 nano 编辑界面，提示用户合并两个不冲突的更新并提交版本留言，使用
-              <code>ctrl + x</code>，选择 Y 同意，然后直接回车，即可离开 nano 编辑界面。执行完毕之后会生成一个新的版本，即合并远端和本地更新的版本，此时在执行
-              <code>git push</code> 远端和本地就同步了。</p>
-          </li>
-          <li>
-            <p>远端更新和本地冲突（修改的是同一文件的相同位置），此时也需要
-              <code>git pull</code> 拉去远端更新,但是提示拉取失败，需要用户手动处理冲突，处理之后相当于修改了文件，所有直接使用
-              <code>git add . git commit -m'' git push</code> 即可提交成功。</p>
-          </li>
-        </ol>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <h3>使用git推送代码</h3>
-        <ol>
-          <li>
-            <p>首先，要在 github 上新建仓库，然后 clone 下来,执行命令：</p>
-            <pre class="language-text"> git clone 仓库地址
-</pre>
-          </li>
-          <li>
-            <p>首次推送，如果没有 clone 现有仓库，而是直接在本地 git init 的仓库的话，需要先添加远程仓库地址。
-              <em>之后可以省略参数
-                <code>git push</code>
-              </em>
-            </p>
-            <pre class="language-text"> git push -u origin master 
-</pre>
-          </li>
-          <li>
-            <p>为这个仓库添加一个远程地址</p>
-            <pre class="language-text"> git remote add origin [你的github上的仓库地址]
-</pre>
-          </li>
-          <li>
-            <p>由于每次 push 都需要输入用户名和密码，很麻烦。这里需要设置下 ssh</p>
-            <ul>
-              <li>
-                <h4>设置
-                  <code>public key</code>
-                </h4>
-              </li>
-            </ul>
-            <ul>
-              <li>首先需要在本地机器上生成 key。
-                <code>ssh-keygen</code> 这时，会在
-                <code>~/.ssh/</code>文件夹之下生成一对
-                <code>ssh key</code> ，包括一个
-                <code>public key</code> 和一个
-                <code>private key</code> 。（如果是windows用户，这个文件一般会在这里：
-                <code>C:\Users\Administrator.ssh）</code>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <p>复制
-                  <code>public key</code> 查看内容
-                  <code>cat ~/.ssh/id_rsa.pub</code>
-                </p>
-              </li>
-              <li>
-                <p>将拷贝的 public key 添加在github账户上：</p>
-                <pre class="language-text"> 右上角点击头像-&gt; 点击settings-&gt; 点击SSH KEYS-&gt; 
-
- 点击ADD SSH KEYS-&gt; 将获取的public key粘贴于此
-</pre>
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <h3>git 分支操作</h3>
-        <ul>
-          <li>
-            <h4>创建分支</h4>
-            <ol>
-              <li>
-                <p>创建新的分支之后，分支内默认和 master 分支内的内容相同。想要将本地创建好的分支同步到远端，直接执行
-                  <code>git push -u origin [分支名]</code> 即可，以后想要更新
-                  <code>gh-pages</code> 分支，直接按照原来的 git 三步即可。</p>
-              </li>
-              <li>
-                <p>
-                  <code>gh-pages</code> 分支比较特殊，该分支上的内容可以使用
-                  <code>github账户名.github.io/仓库名</code> 地址访问。</p>
-              </li>
-              <li>
-                <p>创建分支：</p>
-                <pre class="language-text"> git branch [yourbranch] 
-</pre>
-              </li>
-              <li>
-                <p>查看分支:</p>
-                <pre data-role="codeBlock" data-info="" class="language-"><code>git branch  &#x3000;&#x3000;    //&#x67E5;&#x770B;&#x672C;&#x5730;&#x5206;&#x652F;
-git branch&#x3000;-a      //&#x53C2;&#x6570; &#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F;(&#x672C;&#x5730;&#x548C;&#x8FDC;&#x7AEF;)
-git branch&#x3000;-r      //&#x53C2;&#x6570; &#x67E5;&#x770B;&#x8FDC;&#x7AEF;&#x5206;&#x652F;
+  3.&#x5141;&#x8BB8;&#x7528;&#x6237;&#x5C06;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x7684;&#x5305;&#x6216;&#x547D;&#x4EE4;&#x884C;&#x7A0B;&#x5E8F;&#x4E0A;&#x4F20;&#x5230; npm &#x670D;&#x52A1;&#x5668;&#x4F9B;&#x522B;&#x4EBA;&#x4F7F;&#x7528;&#x3002;
 </code></pre>
-              </li>
-            </ol>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>npn 安装方式</h3>
+        <ul>
+          <li>
+            <h4>本地安装 npm</h4>
+            <p>将包安装在项目内的 node_modules 下，如果没有这个文件夹， npm 会自动创建。可以通过 require() 来引入项目内的包。</p>
+            <pre data-role="codeBlock" data-info="" class="language-"><code>npm install express --save # &#x7248;&#x672C;&#x540D;&#x548C;&#x7248;&#x672C;&#x53F7;&#x8BB0;&#x5F55;&#x5728; dependencies &#x5B57;&#x6BB5;
+</code></pre>
+            <pre data-role="codeBlock" data-info="" class="language-"><code>npm install express --save-dev # &#x7248;&#x672C;&#x540D;&#x548C;&#x7248;&#x672C;&#x53F7;&#x8BB0;&#x5F55;&#x5728; devDependencies &#x5B57;&#x6BB5;
+</code></pre>
           </li>
           <li>
-            <h4>切换分支</h4>
-            <p>
-              <code>git checkout [yourbranch]</code> 或者直接创建一个分支，并且切换过去
-              <code>git checkout -b [yourbranch]</code>
-            </p>
+            <h4>全局安装 npm</h4>
+            <p>全局安装后可以直接在命令行里使用，不能在项目内引入。</p>
+            <pre data-role="codeBlock" data-info="" class="language-"><code>npm install gulp -g
+</code></pre>
+            <p>可以使用以下命令来查看所有全局安装的模块：</p>
+            <pre data-role="codeBlock" data-info="" class="language-"><code>npm ls -g
+</code></pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>npm 初始化</h3>
+        <p>创建模块，package.json 文件是必不可少的。我们可以使用 npm 生成 package.json 文件，生成的文件包含了基本的结果。</p>
+        <pre data-role="codeBlock" data-info="" class="language-"><code>npm init
+</code></pre>
+        <p>以上的信息，你需要根据你自己的情况输入。在最后输入 &quot;yes&quot; 后会生成 package.json 文件。同时在这个 json 文件中可以在 script 字段定义我们自己的一些脚本。</p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>创建 npm 包</h3>
+        <pre data-role="codeBlock" data-info="" class="language-"><code>npm install &lt;Module Name&gt;
+</code></pre>
+        <p>例如:</p>
+        <pre data-role="codeBlock" data-info="" class="language-"><code>npm install express --save
+</code></pre>
+        <p>这时，就会在我们的工程目录下生成一个 node_modules 的文件夹，在里边就会有 express 这个包了。如果想要用这个包，只需要在需要的地方
+          <code>require</code> 或者
+          <code>import</code> 一下就可以了。</p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h3>npm 常用命令</h3>
+        <ul>
+          <li>
+            <h4>npm 卸载模块</h4>
+            <pre class="language-text">npm uninstall 模块名称
+</pre>
           </li>
           <li>
-            <h4>删除分支</h4>
-            <p>
-              <code>git branch -d [yourbranch]</code>
-            </p>
+            <h4>更新模块</h4>
+            <pre class="language-text">npm update 模块名称
+</pre>
           </li>
           <li>
-            <h4>推送分支</h4>
-            <p>
-              <code>git push origin [yourbranch]</code>
-            </p>
+            <h4>搜索模块</h4>
+            <pre class="language-text">npm search 模块名称
+</pre>
+          </li>
+          <li>
+            <h4>发布模块</h4>
+            <pre class="language-text">npm publish
+</pre>
+            <p>这里需要注意，发布模块的话需要在 npm 官网注册账号，并且执行下面的命令。</p>
+            <pre data-role="codeBlock" data-info="" class="language-"><code>npm adduser
+
+Username: demo
+
+Password:
+
+Email:(this is public) 1182567968@qq.com
+</code></pre>
+          </li>
+          <li>
+            <h4>查看帮助</h4>
+            <pre class="language-text">npm help
+</pre>
+          </li>
+          <li>
+            <h4>清空缓存</h4>
+            <p>可以清空 NPM 本地的缓存</p>
+            <pre class="language-text">npm cache clear
+</pre>
           </li>
         </ul>
       </li>
       <li>
-        <h3>分支更新及合并</h3>
-        <ul>
-          <li>
-            <h4>拉取更新</h4>
-            <p>拉取更新之后，直接使用
-              <code>git push</code> 就可以同步更新到远端。
-              <br> 拉取主分支上的更新
-              <code>git pull origin master</code>
-            </p>
-          </li>
-          <li>
-            <h4>合并分支</h4>
-            <p>合并其他分支代码
-              <code>git merge [otherbranch]</code>
-            </p>
-          </li>
-        </ul>
+        <h4>撤销发布</h4>
+        <p>撤销发布的某个版本的模块</p>
+        <pre class="language-text">npm unpublish @[版本号]
+</pre>
       </li>
+    </ul>
+    <ul>
       <li>
-        <h3>git 实现历史回滚</h3>
+        <h3>关于其他</h3>
         <ul>
-          <li>回滚之后想要直接同步到远端，由于远端的版本优先于本地，所以直接
-            <code>git push</code> 失败。使用
-            <code>git push -f</code> 强制推送到远端。想要回滚之后在回到原来的版本，版本号找不到了，我们使用
-            <code>git reflog</code> 命令，可查看所有版本的修改，就可以看到所有的版本号了。</li>
+          <li>
+            <h4>npm 中文文档</h4>
+            <pre data-role="codeBlock" data-info="" class="language-"><code>https://www.npmjs.com.cn/
+</code></pre>
+          </li>
+          <li>
+            <h4>npm 英文文档</h4>
+            <pre data-role="codeBlock" data-info="" class="language-"><code>https://docs.npmjs.com/
+</code></pre>
+          </li>
         </ul>
       </li>
     </ul>
@@ -1089,8 +918,12 @@ git branch&#x3000;-r      //&#x53C2;&#x6570; &#x67E5;&#x770B;&#x8FDC;&#x7AEF;&#x
 
 </body>
 
+
+
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="js/templet-page.js"></script>
 <script src="js/index.js"></script>
+
+
 
 </html>
